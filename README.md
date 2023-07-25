@@ -21,13 +21,8 @@ d<sup>5</sup> is coded in Javascript/JQuery and displayed using HTML5 and CSS3
 Craig Sorenson
 <!-- Screenshots -->
 ## Screenshots
-<img src="/projects/d5/assets/img/ss01-s.png" /><br />
+<img src="assets/img/ss01-s.png" /><br />
 <!-- Code snippets -->
-``` detect fullhouse}
-if ((a[0] == a[1] && a[2] == a[3] && a[3] == a[4]) || (a[0] == a[1] && a[1] == a[2] && a[3] == a[4])) { specials[0] = true; }
-detect three of a kind}
-if (((a[0] == a[1] && a[1] == a[2]) || (a[1] == a[2] && a[2] == a[3]) || (a[2] == a[3] && a[3] == a[4]))) { specials[1] = true; }}
-```
 <!-- How to install -->
 ## Installation
 1) Download d5.zip
@@ -35,7 +30,7 @@ if (((a[0] == a[1] && a[1] == a[2]) || (a[1] == a[2] && a[2] == a[3]) || (a[2] =
 3) Open the index.html file inside the d5 folder and enjoy!
 
 ## Other
-This was written in an initial effort to learn JavaScript on my own. The code is a mess (it was worse and has been cleaned up a good bit.) It uses seveal bad techiques including heavy use of global variables. This will be rewritten from scratch at some point using classes and proper state management.
+This was written in an initial effort to learn JavaScript on my own. The code is a mess (it was worse and has been cleaned up a good bit.) It uses several bad techiques including heavy use of global variables. This will be rewritten from scratch at some point using classes and proper state management. It has been placed here in its current state to demonstrate my progress.
 It is not mobile friendly...RWD was not used.
 ...a first project with an inexperienced instructor(myself!)
 <!-- License/Badge -->

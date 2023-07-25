@@ -21,3 +21,6 @@
     --timeLeftShadowCol: var(--bgCol03);
     --timeLeftShadowCol: var(--fgCol03);
 }
+.btnTheme {
+    color: var(--fgCol01) !important;
+}

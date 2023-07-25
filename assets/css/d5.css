@@ -152,10 +152,11 @@ tr:last-of-type th:last-of-type {
 button:hover {
     background-color: var(--fgCol02);
     color: var(--bgCol01);
+    box-shadow: 0 0 2px 2px var(--fgCol01);
 }
 
 .img_dice:hover {
-    opacity: 0.10;
+    opacity: 0.50;
 }
 .img_dice {
     background-color: var(--bgCol02);
