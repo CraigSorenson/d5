@@ -1,0 +1,15 @@
+* {
+  /* theme: dark - green */
+
+  --fgCol01: hsl(46, 100%, 55%); /* was #ffca18 */
+  --fgCol02: hsl(136, 100%, 45%);
+  --fgCol03: hsl(0, 0%, 0%);
+  --bgCol01: hsl(46, 100%, 55%);
+  --bgCol02: hsl(136, 100%, 35%);
+  --bgCol03: hsl(0, 0%, 0%);
+  --bgCol04: hsl(136, 100%, 30%);
+  --shadowCol01: #000000ee;
+  --bgGradCol01: #222222; /* hsl(0, 0%, 13%) */
+  --bgGradCol02: #444444; /* hsl(0, 0%, 27%) */
+  --bgBlendMode: multiply;
+}

@@ -1,0 +1,155 @@
+6,7d5
+<   20210901: Sweeping changes using jQuery and string literals...this alone cut ~50 lines of code!
+<             Moved die images on to buttons.
+20c18
+< DONE: implement user selectable themes
+---
+> TODO: implement user selectable themes
+36a35,36
+> var canvas = document.getElementById("canvas");
+> var ctx = canvas.getContext("2d");
+38d37
+< const DEBUG = false;
+53c52
+<     if (DEBUG) console.log("onclick: ", e);
+---
+>     console.log("onclick: ", e);
+55c54
+<     if (DEBUG) console.log("e?", e.target.id.match(p2)[0]);
+---
+>     console.log("e?", e.target.id.match(p2)[0]);
+99a99
+> 
+100a101,108
+>   //LOAD DIE IMAGES
+>   img1 = document.createElement("img"); img1.src = "./assets/img/1a.png";
+>   img2 = document.createElement("img"); img2.src = "./assets/img/2a.png";
+>   img3 = document.createElement("img"); img3.src = "./assets/img/3a.png";
+>   img4 = document.createElement("img"); img4.src = "./assets/img/4a.png";
+>   img5 = document.createElement("img"); img5.src = "./assets/img/5a.png";
+>   img6 = document.createElement("img"); img6.src = "./assets/img/6a.png";
+> 
+173a182
+> 
+177a187
+> 
+181,188c191,219
+<   // 7759
+<   for (let i = 0; i < 5; i++) {
+<     if (diceArray[1][i] == true) {
+<       $(`#keep${i+1}`).css("opacity",0.5)
+<     }
+<     else {
+<       $(`#keep${i+1}`).css("opacity",1.0)
+<     }
+---
+>   if (diceArray[1][0] == true) {
+>     document.getElementsByName("keep1")[0].textContent = "Keep"
+>   }
+>   else {
+>     document.getElementsByName("keep1")[0].textContent = "Roll"
+>   }
+>   if (diceArray[1][1] == true) {
+>     document.getElementsByName("keep2")[0].textContent = "Keep"
+>   }
+>   else {
+>     document.getElementsByName("keep2")[0].textContent = "Roll"
+>   }
+>   if (diceArray[1][2] == true) {
+>     document.getElementsByName("keep3")[0].textContent = "Keep"
+>   }
+>   else {
+>     document.getElementsByName("keep3")[0].textContent = "Roll"
+>   }
+>   if (diceArray[1][3] == true) {
+>     document.getElementsByName("keep4")[0].textContent = "Keep"
+>   }
+>   else {
+>     document.getElementsByName("keep4")[0].textContent = "Roll"
+>   }
+>   if (diceArray[1][4] == true) {
+>     document.getElementsByName("keep5")[0].textContent = "Keep"
+>   }
+>   else {
+>     document.getElementsByName("keep5")[0].textContent = "Roll"
+190a222
+> 
+201c233
+<   if (DEBUG) console.log(diceArray[0], "Rolls left = ", 3 - rolls);
+---
+>   console.log(diceArray[0], "Rolls left = ", 3 - rolls);
+206a239
+> 
+222a256
+> 
+229c263
+<     for (j = 0; j < 150; j++) {
+---
+>     for (j = 0; j < 50; j++) {
+232c266,271
+<           $(`#keep${i+1}`).html(`<img src="./assets/img/${diceArray[0][i]}.png" onclick="keepRoll(${i})" width="70"/>`);
+---
+>           if ((rollDie() == 1) && (diceArray[1][i] == false)) { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img1, 10 + 80 * (i), 10, 70, 70) };
+>           if ((rollDie() == 2) && (diceArray[1][i] == false)) { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img2, 10 + 80 * (i), 10, 70, 70) };
+>           if ((rollDie() == 3) && (diceArray[1][i] == false)) { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img3, 10 + 80 * (i), 10, 70, 70) };
+>           if ((rollDie() == 4) && (diceArray[1][i] == false)) { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img4, 10 + 80 * (i), 10, 70, 70) };
+>           if ((rollDie() == 5) && (diceArray[1][i] == false)) { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img5, 10 + 80 * (i), 10, 70, 70) };
+>           if ((rollDie() == 6) && (diceArray[1][i] == false)) { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img6, 10 + 80 * (i), 10, 70, 70) };
+238a278
+> 
+239a280
+>   // added ctx.clearRect(10 + 80 * (i), 10, 70, 70); to prevent overlapping images
+242c283,288
+<     $(`#keep${i+1}`).html(`<img src="./assets/img/${diceArray[0][i]}.png" onclick="keepRoll(${i})" width="70"/>`);
+---
+>     if (diceArray[0][i].toString() == '1') { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img1, 10 + 80 * (i), 10, 70, 70) };
+>     if (diceArray[0][i].toString() == '2') { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img2, 10 + 80 * (i), 10, 70, 70) };
+>     if (diceArray[0][i].toString() == '3') { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img3, 10 + 80 * (i), 10, 70, 70) };
+>     if (diceArray[0][i].toString() == '4') { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img4, 10 + 80 * (i), 10, 70, 70) };
+>     if (diceArray[0][i].toString() == '5') { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img5, 10 + 80 * (i), 10, 70, 70) };
+>     if (diceArray[0][i].toString() == '6') { ctx.clearRect(10 + 80 * (i), 10, 70, 70); ctx.drawImage(img6, 10 + 80 * (i), 10, 70, 70) };
+244a291
+> 
+246c293,299
+<   let a = [...diceArray[0]];
+---
+>   // diceArray = br; //7759 temp test
+>   diceArraySrt = new Array(5);
+>   for (var i = 0; i < diceArray[0].length; ++i) {
+>     var a = diceArray[0][i];
+>     diceArraySrt[i] = a;
+>   }
+>   a = diceArraySrt;
+248c301,304
+<   dieTotal = diceArray[0].reduce((a,b) => a + b);
+---
+>   for (var i = 0; i < 5; ++i) {
+>     dieTotal = dieTotal + diceArray[0][i];
+>   }
+>   // var a = br;
+250c306
+<   if ((a[0] !== a[4] && a[0] == a[1] && a[2] == a[3] && a[3] == a[4]) || (a[0] !== a[4] && a[0] == a[1] && a[1] == a[2] && a[3] == a[4])) { specials[0] = true; }
+---
+>   if ((a[0] == a[1] && a[2] == a[3] && a[3] == a[4]) || (a[0] == a[1] && a[1] == a[2] && a[3] == a[4])) { specials[0] = true; }
+263,265c319,320
+<   if (DEBUG) {
+<     console.log("Specials: ", specials); console.log("a: ", a);
+<   };
+---
+>   console.log("Specials: ", specials);
+>   console.log("a: ", a);
+292a348
+> 
+325c381
+< }, 500); //7759 had to increase from 120 to 500 to make keep/roll toggle work reliably
+---
+> }, 120);
+330a387,390
+>     // if (key == 'p' || key == 'P') {
+>     //     paused = !paused;
+>     //     if (paused) logstats();
+>     // }
+336c396
+<     if (key == 'z') { playGame(0); onclick("R0C0"); }
+---
+>     if (key == ' ') { playGame(0); onclick("R0C0"); }

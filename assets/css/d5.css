@@ -1,0 +1,189 @@
+@import url(./theme.css);
+
+body {
+    background-image: linear-gradient(to left top, var(--bgGradCol01), var(--bgGradCol02));
+    color: var(--fgCol02);
+    font-size: 12pt;
+    height: 100vh;
+}
+
+button:focus {
+    outline: none;
+    border-color: var(--fgCol02);
+}
+
+button.keepDie, .btnTheme {
+    background-color: var(--bgCol01);
+    height: 30px;
+    height: 78px;
+    width: 80px;
+    padding: 2px;
+    margin-right: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    color: var(--fgCol02);
+    background-image: linear-gradient(to left top, var(--bgGradCol01), var(--bgGradCol02));
+    box-shadow: 2px 2px 6px var(--shadowCol01);
+    border-radius: 5px;
+    /* background-color: var(--bgCol02);
+    background-blend-mode: color-burn ; */
+}
+
+button.keepDie:focus {
+ 
+}
+
+.btnTheme {
+    font-size: 10pt;
+    margin-top: 5px;
+    width: 100px;
+}
+#myAnswer0 {
+    height: 30px;
+}
+
+
+table {
+    /* margin: auto; */
+    opacity: 0.8;
+}
+
+canvas {
+    /* margin: auto; */
+}
+
+tbody th {
+    background-color: var(--bgCol04);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: 14pt;
+    box-shadow: 2px 2px 6px var(--shadowCol01);
+}
+
+td {
+    text-align: center;
+    width: 100px;
+    height: 28px;
+    background-color: var(--bgCol02);
+    /* background-color: #0cb74a; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    color: var(--fgCol03);
+    box-shadow: 2px 2px 6px var(--shadowCol01);
+    z-index: 999;
+}
+
+td:last-of-type {
+    text-align: center;
+    color: #000000;
+    box-shadow: 2px 2px 6px var(--shadowCol01);
+}
+
+tr:first-of-type th:first-of-type {
+    border-top-left-radius: 10px;
+}
+
+tr:first-of-type th:last-of-type {
+    border-top-right-radius: 10px;
+}
+
+tr:last-of-type th:first-of-type {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-of-type th:last-of-type {
+    border-bottom-right-radius: 10px;
+}
+
+#div1 {
+    /* d5 */
+    color: var(--fgCol01);
+    position: absolute;
+    top: 150px;
+    left: 80px;
+    font-family: monospace;
+    font-size: 90pt;
+    text-shadow: 4px 4px 10px var(--shadowCol01);
+    transform: rotate(-30deg);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+#div2 {
+    /* result */
+    color: var(--fgCol01);
+    position: absolute;
+    top: 650px;
+    left: 10px;
+    font-family: monospace;
+    font-size: 14pt;
+    text-shadow: 1px 1px var(--shadowCol01);
+    transform: rotate(-30deg);
+    z-index: -1;
+}
+
+#div3 {
+    /* copyright */
+    color: var(--fgCol02);
+    position: absolute;
+    top: 397px;
+    left: -175px;
+    font-family: monospace;
+    font-size: 12pt;
+    text-shadow: 1px 1px 4px var(--shadowCol01);
+    transform: rotate(-90deg);
+}
+
+#div4 {
+    /* Rolls left */
+    color: var(--fgCol02);
+    position: absolute;
+    top: 397px;
+    left: -175px;
+    font-family: monospace;
+    font-size: 12pt;
+    text-shadow: 2px 2px 4px var(--shadowCol01);
+    transform: rotate(-90deg);
+    z-index: -1;
+}
+
+button:hover {
+    background-color: var(--fgCol02);
+    color: var(--bgCol01);
+}
+
+.img_dice:hover {
+    opacity: 0.10;
+}
+.img_dice {
+    background-color: var(--bgCol02);
+    background-blend-mode: hard-light;
+    opacity: 0.8
+}
+
+/* Adding for modal getPlayerInfo*/
+#getPlayerInfo {
+    
+    width: 100%;
+    height: 100%;
+    background-color: #000000aa;
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+}
+
+#frmGetPlayerInfo {
+    width: 600px;
+    min-height: 600px;
+    margin: auto;
+}
+
+/* font {
+    pointer-events: none;
+  } */

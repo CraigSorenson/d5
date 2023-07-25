@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- See d5.js for comments -->
+<html>
+    <head>
+	    <meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <meta name="keywords" content="game, yahtzee clone, d5, dice, fun, yahtzee" />
+        <meta name="author" content="Craig Sorenson" />
+        <link rel="icon" href="/assets/img/favicon.svg" />
+		<link href="./assets/css/d5.css" rel="stylesheet" type="text/css" />
+        <link id="cssTheme" href="./assets/css/color.css" rel="stylesheet" type="text/css" />
+        <script src='./assets/js/jquery-2.1.1.min.js'></script>
+        <script async src='./assets/js/d5.js'></script> <!-- Use async or put at end of body-->
+        <script async src='./assets/js/theme.js'></script> <!-- Use async or put at end of body-->
+        <title>d^5</title>
+    </head>
+<body>
+        <!-- Adding 20210729 for modal player info  -->
+        <div id="getPlayerInfo">
+            <form id="frmGetPlayerInfo" action="">
+                <fieldset>
+                    <input type="number">Number of players? (1-4)
+                </fieldset>
+            </form>
+        </div>
+        <!-- Adding 20210729 for modal player info  -->
+
+        <!-- Added div class dropdown for theme menu 20210727  -->
+        <div class="dropdown">
+            <span id="themeCrumb">&gt;&gt;</span>
+            <div class="dropdown-content">
+                <h4>Theme</h4>
+                <button id="theme1" class="btnTheme" type="button" onclick=(funcTheme(1))>Blue (D)</button>
+                <button id="theme2" class="btnTheme" type="button" onclick=(funcTheme(2))>Green (D)</button>
+                <button id="theme3" class="btnTheme" type="button" onclick=(funcTheme(3))>Hot Pink (D)</button>
+                <button id="theme5" class="btnTheme" type="button" onclick=(funcTheme(5))>Orange (D)</button>
+                <button id="theme6" class="btnTheme" type="button" onclick=(funcTheme(6))>Purple Beast (D)</button>
+            </div>
+        </div>
+        <!-- Added div class dropdown for theme menu 20210727  -->
+        <center>
+            <table name="tbl01"></table>
+            <br />
+            <button id="keep1" class="keepDie" name="keep1" >Roll</button>
+            <button id="keep2" class="keepDie" name="keep2" >Roll</button>
+            <button id="keep3" class="keepDie" name="keep3" >Roll</button>
+            <button id="keep4" class="keepDie" name="keep4" >Roll</button>
+            <button id="keep5" class="keepDie" name="keep5" >Roll</button>
+            <br />
+        </center>
+        <center>
+            <!-- <canvas id="canvas" width="410" height="80"></canvas> -->
+            <br />            <br />
+            <button id="myAnswer0" class="keepDie" name="myAnswer0" style="width: 150px" onclick="playGame(0);">Roll Dice</button>
+            <div id="div1">
+                <p> d<sup>5</sup></p>
+            </div>
+            <div id="div2">
+                <p id="results" name ="results">Welcome to d<sup>5</sup>!</p>
+            </div>
+            <div id="div3">
+                <p id="copyright">Copyright &copy; 2021, Craig Sorenson, All Rights Reserved</p>
+            </div>
+        </center>
+        <noscript>
+            Your browser doesn't support or has disabled Javascript.
+            Please enable it or use a different browser.
+        </noscript>
+        <footer>
+            
+        </footer>
+
+    </body>
+</html>
+

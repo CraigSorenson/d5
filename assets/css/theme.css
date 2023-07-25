@@ -1,0 +1,61 @@
+/* Added for theme menu 20210727  */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 1000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444444bb;
+  min-width: auto;
+  font-size: 18pt;
+  color: var(--fgCol01);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown button {
+  width: 8em;
+  height: 2.5em;
+  font-size: 14pt;
+  background-color: var(--bgCol01);
+  color: var(--bgCol02);
+  /* margin: .25em; */
+  border-style: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px var(--fgCol01);
+}
+
+.dropdown button:hover {
+  opacity: 0.8;
+}
+
+#themeCrumb {
+  display: none;
+  padding-right: 15px;
+  padding-bottom: 15px;
+
+  animation-name: hello;
+  animation-duration: 15s;
+  /* animation-delay: 4s; */
+  animation-iteration-count: infinite;
+}
+
+@keyframes hello {
+  0%   {opacity: 1.0}
+  20%  {opacity: 0.5}
+  40%  {opacity: 0.1}
+  60%  {opacity: 0.1}
+  80%  {opacity: 0.5}
+  100% {opacity: 1.0}
+}

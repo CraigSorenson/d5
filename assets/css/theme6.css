@@ -1,0 +1,23 @@
+* {    
+    /* theme: Purple Beast */
+    --fgCol01: hsl(278, 69%, 55%);
+    --fgCol02: hsl(278, 69%, 65%);
+    --fgCol03: hsl(278, 69%, 75%);
+    --fgCol04: #dadada;
+    --fgCol05: #222222;
+    --bgCol01: hsl(0, 0%, 10%);
+    --bgCol02: hsl(0, 0%, 15%);
+    --bgCol03: #3c4748;
+    --bgCol04: hsl(110, 74%, 40%);
+    --btnFocus01: hsl(358, 74%, 20%);
+    --meterColor: var(--bgCol01);
+    --shadowCol02: #00000088;
+    --shadowCol01: #fafafa20;
+    --bgGradCol01: #222222; /* hsl(0, 0%, 13%) */
+    --bgGradCol02: #444444; /* hsl(0, 0%, 27%) */
+    --bgBlendMode: multiply;
+    --timeLeftCol: hsl(240, 100%, 40%);
+    --timeLeftCol: var(--fgCol01);
+    --timeLeftShadowCol: var(--bgCol03);
+    --timeLeftShadowCol: var(--fgCol03);
+}

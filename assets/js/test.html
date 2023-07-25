@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./jquery-2.1.1.min.js"></script>
+</head>
+
+<body>
+  <script>
+    $(document).keypress(function (event) {
+      key = String.fromCharCode(event.which);
+      if ((key >= 'a' && key <= 'z') || (key >= 'A' && key <= 'Z') || (key >= '0' && key <= '9')) {
+        if (key == '1') { keepRoll(0); ; }
+        if (key == '2') { keepRoll(1); ; }
+        if (key == '3') { keepRoll(2); ; }
+        if (key == '4') { keepRoll(3); ; }
+        if (key == '5') { keepRoll(4); ; }
+      }
+    });
+    function keepRoll(d) {
+        console.log(`TEST ${d}`);
+      }
+  </script>
+</body>
+
+</html>
